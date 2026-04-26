@@ -173,13 +173,16 @@ USE catalyst_ai;
 -- Sample candidates table (schema will auto-create via Hibernate)
 -- Ensure your application.properties configures Hibernate to create tables
 ```
-example table in database
-id          Name                email                          skills            experience        location
-1	  Rahul	  	rahul@gmail.com	          Java, Spring Boot, MySQL	   4	         Hyderabad
-2	  Priya	  	priya@gmail.com	          React, Java, Spring Boot	   3	         Bangalore
-3 	  Arjun	 	 arjun@gmail.com	          Python, Django, SQL	   5	         Chennai
-4	  Meera	  	meera.dev@gmail.com	  Python, PyTorch, AWS	   3	         Delhi
-5	  Anjali	          anjali.p@gmail.com	  PHP, Laravel, Vue.js	   5	         Hyderabad
+
+**Sample Candidates Table:**
+
+| ID | Name | Email | Skills | Experience | Location |
+|-----|------|-------|--------|------------|----------|
+| 1 | Rahul | rahul@gmail.com | Java, Spring Boot, MySQL | 4 years | Hyderabad |
+| 2 | Priya | priya@gmail.com | React, Java, Spring Boot | 3 years | Bangalore |
+| 3 | Arjun | arjun@gmail.com | Python, Django, SQL | 5 years | Chennai |
+| 4 | Meera | meera.dev@gmail.com | Python, PyTorch, AWS | 3 years | Delhi |
+| 5 | Anjali | anjali.p@gmail.com | PHP, Laravel, Vue.js | 5 years | Hyderabad |
 
 ### Step 3: Configure Environment Variables
 
