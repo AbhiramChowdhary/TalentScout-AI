@@ -1,0 +1,10 @@
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\controller\RecruiterController.java
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\entities\Candidate.java
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\entities\Job.java
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\entities\Result.java
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\exception\GlobalExceptionHandler.java
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\repository\CandidateRepository.java
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\repository\JobRepository.java
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\repository\ResultRepository.java
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\service\GeminiService.java
+D:\Project\talentscout_ai\src\main\java\com\app\recruiter\TalentscoutAiApplication.java

@@ -1,0 +1,10 @@
+com\app\recruiter\exception\GlobalExceptionHandler.class
+com\app\recruiter\entities\Job.class
+com\app\recruiter\repository\CandidateRepository.class
+com\app\recruiter\repository\JobRepository.class
+com\app\recruiter\entities\Result.class
+com\app\recruiter\service\GeminiService.class
+com\app\recruiter\repository\ResultRepository.class
+com\app\recruiter\TalentscoutAiApplication.class
+com\app\recruiter\controller\RecruiterController.class
+com\app\recruiter\entities\Candidate.class

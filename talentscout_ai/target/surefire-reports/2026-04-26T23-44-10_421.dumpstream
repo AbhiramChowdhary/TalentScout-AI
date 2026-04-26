@@ -1,0 +1,5 @@
+# Created at 2026-04-26T23:44:10.620
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Project\talentscout_ai\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

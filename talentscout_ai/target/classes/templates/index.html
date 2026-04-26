@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>AI Talent Scouting Agent</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+*{
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    color:white;
+}
+
+.hero{
+    padding:70px 0;
+}
+
+.hero h1{
+    font-size:52px;
+    font-weight:800;
+    line-height:1.15;
+}
+
+.hero p{
+    color:rgba(255,255,255,0.82);
+    font-size:18px;
+    margin-top:18px;
+}
+
+.glass-card{
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.14);
+    backdrop-filter:blur(14px);
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.form-control{
+    border:none;
+    border-radius:14px;
+    padding:14px;
+}
+
+.form-control:focus{
+    box-shadow:0 0 0 3px rgba(255,255,255,0.2);
+}
+
+.btn-premium{
+    background:white;
+    color:#0f172a;
+    font-weight:700;
+    border:none;
+    border-radius:14px;
+    padding:14px;
+    transition:0.3s;
+}
+
+.btn-premium:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 20px rgba(0,0,0,0.25);
+}
+
+.feature-box{
+    background:rgba(255,255,255,0.08);
+    border-radius:18px;
+    padding:18px;
+    text-align:center;
+    height:100%;
+}
+
+.feature-box h5{
+    font-weight:700;
+}
+
+.feature-box p{
+    font-size:14px;
+    color:rgba(255,255,255,0.75);
+    margin:0;
+}
+
+/* Loader */
+.loader-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(15,23,42,0.82);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.loader-box{
+    text-align:center;
+    color:white;
+}
+
+.spinner{
+    width:75px;
+    height:75px;
+    border:6px solid rgba(255,255,255,0.22);
+    border-top:6px solid white;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    margin:auto;
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+.loader-text{
+    margin-top:18px;
+    font-size:22px;
+    font-weight:700;
+}
+
+.loader-sub{
+    margin-top:8px;
+    color:rgba(255,255,255,0.75);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container hero">
+
+<div class="row align-items-center g-5">
+
+<div class="col-lg-6">
+
+	<h1>TalentScout AI</h1>
+
+	<p class="mt-3 fs-5 fw-semibold">
+	AI Talent Scouting & Engagement Agent
+	</p>
+
+<p>
+Instantly parse job descriptions, rank candidates, assess interest,
+and generate recruiter outreach using live AI intelligence.
+</p>
+
+<div class="row g-3 mt-4">
+
+<div class="col-md-4">
+<div class="feature-box">
+<h5>JD Parsing</h5>
+<p>Extract role, skills & experience</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="feature-box">
+<h5>Smart Ranking</h5>
+<p>Match + Interest scoring</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="feature-box">
+<h5>AI Outreach</h5>
+<p>Personalized recruiter messaging</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-6">
+
+<div class="glass-card">
+
+<h3 class="fw-bold mb-4">Create New Hiring Search</h3>
+
+<form id="jobForm" action="/submitJob" method="post">
+
+<div class="mb-3">
+<label class="form-label">Job Title</label>
+<input type="text"
+       name="title"
+       class="form-control"
+       placeholder="e.g. Java Backend Developer"
+       required>
+</div>
+
+<div class="mb-4">
+<label class="form-label">Job Description</label>
+<textarea name="description"
+          class="form-control"
+          rows="7"
+          placeholder="Required skills, experience, tools, location..."
+          required></textarea>
+</div>
+
+<div class="d-grid">
+<button id="submitBtn" class="btn btn-premium btn-lg" type="submit">
+Generate Ranked Shortlist
+</button>
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Loader -->
+<div class="loader-overlay" id="loader">
+    <div class="loader-box">
+        <div class="spinner"></div>
+        <div class="loader-text">Analyzing Candidates with AI...</div>
+        <div class="loader-sub">
+            Matching profiles • Predicting interest • Ranking shortlist
+        </div>
+    </div>
+</div>
+
+<script>
+const form = document.getElementById("jobForm");
+const loader = document.getElementById("loader");
+const btn = document.getElementById("submitBtn");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    loader.style.display = "flex";
+
+    btn.disabled = true;
+    btn.innerText = "Processing...";
+
+    setTimeout(() => {
+        form.submit();
+    }, 200);
+});
+
+/* FIX BACK BUTTON BUG */
+window.addEventListener("pageshow", function(event){
+    loader.style.display = "none";
+    btn.disabled = false;
+    btn.innerText = "Generate Ranked Shortlist";
+});
+</script>
+
+</body>
+</html>

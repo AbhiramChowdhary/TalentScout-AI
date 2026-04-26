@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>AI Talent Dashboard</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+*{
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+}
+
+.table-responsive{
+    overflow-x:auto;
+}
+
+table{
+    min-width:1500px;
+}
+
+.page-title{
+    font-size:38px;
+    font-weight:800;
+    color:#0f172a;
+}
+
+.sub-title{
+    color:#64748b;
+}
+
+.card-box{
+    background:white;
+    border:none;
+    border-radius:22px;
+    padding:24px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+    height:100%;
+}
+
+.metric{
+    font-size:32px;
+    font-weight:800;
+    color:#2563eb;
+}
+
+.table-wrap{
+    background:white;
+    border-radius:22px;
+    padding:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+.table thead th{
+    background:#0f172a;
+    color:white;
+    border:none;
+    padding:16px;
+    white-space:nowrap;
+}
+
+.table tbody td{
+    padding:14px;
+    vertical-align:middle;
+}
+
+tbody tr:nth-child(even){
+    background:#ffffff;
+}
+
+tbody tr:nth-child(odd){
+    background:#f8fafc;
+}
+
+.top-row{
+    background:#eff6ff !important;
+    border-left:4px solid #2563eb;
+}
+
+.long-box{
+    max-width:240px;
+    max-height:140px;
+    overflow:auto;
+    background:#f8fafc;
+    padding:12px;
+    border-radius:12px;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.badge-pill{
+    border-radius:30px;
+    padding:8px 14px;
+    font-weight:700;
+}
+
+.btn-home{
+    border-radius:14px;
+    padding:14px 30px;
+    font-weight:700;
+}
+
+a:hover{
+    text-decoration:underline !important;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container py-5">
+
+<div class="text-center mb-5">
+<h1 class="page-title">AI Talent Scouting Dashboard</h1>
+<p class="sub-title">
+Results for <span th:text="${jobTitle}"></span>
+</p>
+</div>
+
+<div class="row g-4 mb-5">
+
+<div class="col-md-3">
+<div class="card-box text-center">
+<h6>Total Candidates</h6>
+<div class="metric" th:text="${#lists.size(results)}"></div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card-box text-center">
+<h6>Top Candidate</h6>
+<div class="metric fs-3" th:text="${results[0].name}"></div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card-box text-center">
+<h6>Highest Score</h6>
+<div class="metric"
+     th:text="${#numbers.formatDecimal(results[0].finalScore,1,0)}">
+</div>
+</div>
+</div>
+
+<div class="col-md-3">
+<div class="card-box text-center">
+
+<h6>AI Status</h6>
+
+<div class="metric fs-5"
+     th:classappend="${aiStatus == 'Gemini Live' or aiStatus == 'AI Live'} ? 'text-success' : 'text-warning'"
+     th:text="${aiStatus}">
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="table-wrap table-responsive">
+
+<table class="table table-hover">
+
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Email</th>
+<th>Skills</th>
+<th>Exp</th>
+<th>Match</th>
+<th>Interest</th>
+<th>Final</th>
+<th>AI Reason</th>
+<th>Outreach</th>
+<th>Email Draft</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr th:each="r, stat : ${results}"
+    th:classappend="${stat.index == 0} ? 'top-row'">
+
+<td th:text="${stat.count}"></td>
+
+<td class="fw-bold" th:text="${r.name}"></td>
+
+<td>
+<a th:href="'mailto:' + ${r.email}"
+   th:text="${r.email}"
+   class="fw-semibold text-primary text-decoration-none">
+</a>
+</td>
+
+<td th:text="${r.skills}"></td>
+
+<td th:text="${r.experience + ' yrs'}"></td>
+
+<td>
+<span class="badge bg-primary badge-pill"
+      th:text="${#numbers.formatDecimal(r.matchScore,1,0)}">
+</span>
+</td>
+
+<td>
+<span class="badge bg-warning text-dark badge-pill"
+      th:text="${#numbers.formatDecimal(r.interestScore,1,0)}">
+</span>
+</td>
+
+<td>
+<span class="badge bg-success badge-pill"
+      th:text="${#numbers.formatDecimal(r.finalScore,1,0)}">
+</span>
+</td>
+
+<td>
+<div class="long-box" th:text="${r.reason}"></div>
+</td>
+
+<td>
+<div class="long-box" th:text="${r.message}"></div>
+</td>
+
+<td>
+<div class="long-box" th:text="${r.generatedEmail}"></div>
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="text-center mt-5">
+<a href="/" class="btn btn-primary btn-home">
+Run Another Search
+</a>
+</div>
+
+</div>
+
+</body>
+</html>
