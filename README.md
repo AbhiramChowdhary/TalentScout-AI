@@ -173,6 +173,13 @@ USE catalyst_ai;
 -- Sample candidates table (schema will auto-create via Hibernate)
 -- Ensure your application.properties configures Hibernate to create tables
 ```
+example table in database
+id          Name                email                          skills            experience        location
+1	  Rahul	  	rahul@gmail.com	          Java, Spring Boot, MySQL	   4	         Hyderabad
+2	  Priya	  	priya@gmail.com	          React, Java, Spring Boot	   3	         Bangalore
+3 	  Arjun	 	 arjun@gmail.com	          Python, Django, SQL	   5	         Chennai
+4	  Meera	  	meera.dev@gmail.com	  Python, PyTorch, AWS	   3	         Delhi
+5	  Anjali	          anjali.p@gmail.com	  PHP, Laravel, Vue.js	   5	         Hyderabad
 
 ### Step 3: Configure Environment Variables
 
@@ -183,6 +190,7 @@ Create a `.env` file in the project root or configure in Eclipse/IDE:
 Create or update `src/main/resources/application.properties`:
 
 ```properties
+spring.application.name=talentscout_ai
 # MySQL Database Configuration
 spring.datasource.url=jdbc:mysql://localhost:3306/catalyst_ai
 spring.datasource.username=root
@@ -191,8 +199,9 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 # JPA/Hibernate Configuration
 spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=false
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.show-sql=true
+
+spring.thymeleaf.cache=false
 
 # Gemini AI API Key
 gemini.api.key=your_gemini_api_key_here
