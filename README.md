@@ -2,7 +2,7 @@
 
 >  **AI-Powered Talent Scouting & Engagement Agent** | Automate candidate screening, ranking, and outreach
 
-TalentScout AI helps recruiters reduce manual screening effort by automatically analyzing job descriptions, ranking candidates, estimating candidate interest, and generating personalized outreach messages. Built as an intelligent recruiter assistant, the platform enables hiring teams to move faster with data-backed shortlists.
+TalentScout AI helps recruiters reduce manual screening effort by automatically analyzing job descriptions, ranking candidates, estimating candidate interest, and generating personalized outreach messages.
 
 **Built for:** Catalyst AI Hackathon 2026
 
@@ -167,8 +167,8 @@ mysql -u root -p
 Then run:
 
 ```sql
-CREATE DATABASE talentscout_db;
-USE talentscout_db;
+CREATE DATABASE catalyst_ai;
+USE catalyst_ai;
 
 -- Sample candidates table (schema will auto-create via Hibernate)
 -- Ensure your application.properties configures Hibernate to create tables
@@ -184,7 +184,7 @@ Create or update `src/main/resources/application.properties`:
 
 ```properties
 # MySQL Database Configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/talentscout_db
+spring.datasource.url=jdbc:mysql://localhost:3306/catalyst_ai
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
@@ -207,7 +207,7 @@ server.port=8080
 2. Go to **Arguments** tab
 3. Add to **VM arguments**:
    ```
-   -DDB_URL=jdbc:mysql://localhost:3306/talentscout_db
+   -DDB_URL=jdbc:mysql://localhost:3306/catalyst_ai
    -DDB_USERNAME=root
    -DDB_PASSWORD=yourpassword
    -DGEMINI_API_KEY=your_api_key
