@@ -32,11 +32,11 @@ TalentScout AI helps recruiters reduce manual screening effort by automatically 
 
 Recruiters spend hours on repetitive tasks:
 
-- 📄 Reviewing resumes manually
-- 🔍 Matching candidates to job requirements
-- ⭐ Prioritizing top applicants
-- ✉️ Reaching out individually
-- 📊 Measuring candidate interest
+-  Reviewing resumes manually
+-  Matching candidates to job requirements
+-  Prioritizing top applicants
+-  Reaching out individually
+-  Measuring candidate interest
 
 **TalentScout AI automates this entire workflow** using AI-driven candidate evaluation, allowing recruiters to focus on relationship-building instead of admin work.
 
