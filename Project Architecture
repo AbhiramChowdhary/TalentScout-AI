@@ -1,0 +1,14 @@
+#Architecture
+Recruiter Input (JD)
+        ↓
+Spring Boot Controller
+        ↓
+Gemini AI Service
+        ↓
+Candidate Database (MySQL)
+        ↓
+Scoring Engine
+        ↓
+Results Dashboard
+        ↓
+Email Outreach Generation
