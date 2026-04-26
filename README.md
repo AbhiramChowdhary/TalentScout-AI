@@ -107,5 +107,80 @@ Premium recruiter dashboard with:
 
 ## Final Score Formula
 
-```text
+`-text
 Final Score = (0.85 × Match Score) + (0.15 × Interest Score)
+
+#Architecture
+Recruiter Input (JD)
+        ↓
+Spring Boot Controller
+        ↓
+Gemini AI Service
+        ↓
+Candidate Database (MySQL)
+        ↓
+Scoring Engine
+        ↓
+Results Dashboard
+        ↓
+Email Outreach Generation
+
+#Sample Input
+Job Title
+Java Backend Developer
+Job Description
+Looking for Java, Spring Boot, REST APIs, MySQL, Microservices.
+3+ years experience preferred.
+
+#Sample Output
+Rank	Candidate	Match	Interest	Final
+1	Rahul	78	92	80.1
+2	Priya	68	70	68.3
+3	Arjun	5	5	5.0
+
+#Local Setup Instructions
+#1. Clone Repository
+git clone <your-github-repo-link>
+cd TalentScout-AI
+
+#2. Create MySQL Database
+CREATE DATABASE catalyst_ai;
+
+#3. Configure Environment Variables
+Set in Eclipse Run Configuration:
+DB_URL=jdbc:mysql://localhost:3306/catalyst_ai
+DB_USERNAME=root
+DB_PASSWORD=yourpassword
+GEMINI_API_KEY=your_api_key
+
+#4. Run Project
+Run:
+TalentscoutAiApplication.java
+
+#5. Open Browser
+http://localhost:8080
+
+#Demo Use Case
+A recruiter hiring for a Java Backend role can instantly receive:
+Ranked candidates
+AI fit explanations
+Outreach messages
+Email drafts
+
+#Future Enhancements
+Resume PDF upload parsing
+LinkedIn profile import
+Interview scheduling agent
+Real candidate response tracking
+Multi-role recommendation engine
+
+#Why TalentScout AI Stands Out
+Unlike simple job portals, TalentScout AI acts as an intelligent recruiter copilot by combining:
+Candidate matching
+Interest estimation
+Explainable AI
+Automated engagement
+
+#Author
+Built for Catalyst AI Hackathon 2026
+By: Abhi Ram
