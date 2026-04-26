@@ -1,6 +1,6 @@
 # TalentScout AI
 
-> 🤖 **AI-Powered Talent Scouting & Engagement Agent** | Automate candidate screening, ranking, and outreach
+>  **AI-Powered Talent Scouting & Engagement Agent** | Automate candidate screening, ranking, and outreach
 
 TalentScout AI helps recruiters reduce manual screening effort by automatically analyzing job descriptions, ranking candidates, estimating candidate interest, and generating personalized outreach messages. Built as an intelligent recruiter assistant, the platform enables hiring teams to move faster with data-backed shortlists.
 
@@ -44,32 +44,32 @@ Recruiters spend hours on repetitive tasks:
 
 ## Key Features
 
-### 🧠 Smart Job Description Parsing
+###  Smart Job Description Parsing
 Automatically extracts:
 - Required skills
 - Experience level
 - Role expectations
 - Key qualifications
 
-### 🎯 AI Candidate Ranking
+###  AI Candidate Ranking
 Every candidate receives:
 - **Match Score** (0–100): How well candidate skills align with job requirements
 - **Interest Score** (0–100): Estimated probability of candidate interest in the role
 - **Final Weighted Score**: Combined score for prioritization
 
-### 💡 Explainable AI Decisions
+###  Explainable AI Decisions
 Each ranked result includes reasoning explaining why the candidate matches (or doesn't match) the role.
 
-### 📧 Personalized Outreach
+###  Personalized Outreach
 Generates recruiter-ready:
 - Outreach messages
 - Email drafts
 - Engagement templates
 
-### 🔄 AI Reliability Layer
+###  AI Reliability Layer
 If Google Gemini API becomes unavailable, the system automatically switches to a fallback scoring engine to ensure continuous operation.
 
-### 📊 Dashboard UI
+###  Dashboard UI
 Premium recruiter dashboard featuring:
 - Top candidate insights
 - Metrics and statistics cards
@@ -138,7 +138,7 @@ Premium recruiter dashboard featuring:
 
 Before running TalentScout AI, ensure you have:
 
-- **Java Development Kit (JDK)** 11 or higher
+- **Java Development Kit (JDK)** 17 or higher
   - Verify: `java -version`
 - **MySQL Server** 8.0 or higher
   - Verify: `mysql --version`
@@ -323,8 +323,7 @@ Final Score = (0.85 × Match Score) + (0.15 × Interest Score)
 - Click on each candidate to see detailed scoring breakdown
 - Read AI explanations for each score
 
-### Step 4: Generate Outreach
-- Click **Generate Email** for any candidate
+### Step 4: Generates Outreach
 - Review personalized outreach message
 - Copy to email client or download as draft
 
@@ -395,14 +394,14 @@ Looking for experienced Java developer with:
 
 ## Future Enhancements
 
-- 📄 **Resume PDF Upload** - Parse PDFs directly instead of manual entry
-- 🔗 **LinkedIn Integration** - Import candidate profiles from LinkedIn
-- 📅 **Interview Scheduling Agent** - Auto-schedule interviews with candidates
-- 📊 **Response Tracking** - Monitor candidate responses and engagement metrics
-- 🎯 **Multi-Role Recommendation** - Suggest candidates for multiple open positions simultaneously
-- 🔐 **Role-Based Access Control** - Admin, recruiter, and viewer roles
-- 📱 **Mobile Dashboard** - Responsive design for recruitment on-the-go
-- 🌐 **Multi-Language Support** - Support for global recruitment teams
+-  **Resume PDF Upload** - Parse PDFs directly instead of manual entry
+-  **LinkedIn Integration** - Import candidate profiles from LinkedIn
+-  **Interview Scheduling Agent** - Auto-schedule interviews with candidates
+-  **Response Tracking** - Monitor candidate responses and engagement metrics
+-  **Multi-Role Recommendation** - Suggest candidates for multiple open positions simultaneously
+-  **Role-Based Access Control** - Admin, recruiter, and viewer roles
+-  **Mobile Dashboard** - Responsive design for recruitment on-the-go
+-  **Multi-Language Support** - Support for global recruitment teams
 
 ---
 
@@ -410,12 +409,12 @@ Looking for experienced Java developer with:
 
 Unlike simple job portals, TalentScout AI acts as an **intelligent recruiter copilot** by combining:
 
-✅ **Automated Candidate Matching** - AI-driven skill alignment  
-✅ **Interest Estimation** - Predicts likelihood of candidate engagement  
-✅ **Explainable AI** - Understand why scores are assigned  
-✅ **Automated Engagement** - Generate personalized outreach instantly  
-✅ **Reliability Layer** - Fallback engine ensures uptime  
-✅ **Data-Backed Decisions** - Move faster with confidence  
+ **Automated Candidate Matching** - AI-driven skill alignment  
+ **Interest Estimation** - Predicts likelihood of candidate engagement  
+ **Explainable AI** - Understand why scores are assigned  
+ **Automated Engagement** - Generate personalized outreach instantly  
+ **Reliability Layer** - Fallback engine ensures uptime  
+ **Data-Backed Decisions** - Move faster with confidence  
 
 ---
 
@@ -441,9 +440,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## Support & Contact
 
 For issues, questions, or suggestions:
-- 🐛 [Report Issues](https://github.com/AbhiramChowdhary/TalentScout-AI/issues)
-- 💬 [Start a Discussion](https://github.com/AbhiramChowdhary/TalentScout-AI/discussions)
+-  [Report Issues](https://github.com/AbhiramChowdhary/TalentScout-AI/issues)
+-  [Start a Discussion](https://github.com/AbhiramChowdhary/TalentScout-AI/discussions)
 
 ---
 
-**Made with ❤️ for the Catalyst AI Hackathon 2026**
+**Made for the Catalyst AI Hackathon 2026**
