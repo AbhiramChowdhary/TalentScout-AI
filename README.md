@@ -207,7 +207,7 @@ spring.jpa.show-sql=true
 spring.thymeleaf.cache=false
 
 # Gemini AI API Key
-gemini.api.key=your_gemini_api_key_here  (Here you need to past your gemini AI API Key. If you don't have the key, go to Google AI Studio and create It )
+gemini.api.key=your_gemini_api_key_here  (Here you need to past your gemini AI API Key. If you don't have the key, go to Google AI Studio and Create It )
 
 # Server Configuration
 server.port=8080
