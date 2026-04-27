@@ -207,7 +207,7 @@ spring.jpa.show-sql=true
 spring.thymeleaf.cache=false
 
 # Gemini AI API Key
-gemini.api.key=your_gemini_api_key_here
+gemini.api.key=your_gemini_api_key_here  (Here you need to past your gemini AI API Key. If you don't have the key, go to Google AI Studio and create It )
 
 # Server Configuration
 server.port=8080
@@ -222,7 +222,8 @@ server.port=8080
    -DDB_URL=jdbc:mysql://localhost:3306/catalyst_ai
    -DDB_USERNAME=root
    -DDB_PASSWORD=yourpassword
-   -DGEMINI_API_KEY=your_api_key
+   -DGEMINI_API_KEY=your_api_key (Here you need to past your gemini AI API Key. If you don't have the key go to Google  AI Studio and create It )
+   
    ```
 
 ### Step 4: Build & Run Project
