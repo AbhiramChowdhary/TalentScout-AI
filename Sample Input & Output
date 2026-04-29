@@ -6,7 +6,7 @@ Looking for Java, Spring Boot, REST APIs, MySQL, Microservices.
 3+ years experience preferred.
 
 #Sample Output
-Rank	Candidate	Match	Interest	Final
-1	Rahul	78	92	80.1
-2	Priya	68	70	68.3
-3	Arjun	5 	5   5.0
+Rank	Candidate	 Match	Interest	Final
+1	      Rahul	    78	    92	    80.1
+2	      Priya	    68	    70	    68.3
+3	      Arjun	    5 	    5       5.0
